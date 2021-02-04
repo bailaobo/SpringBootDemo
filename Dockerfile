@@ -1,4 +1,4 @@
-FROM registry-scu.cloudtogo.cn/ubuntu:jdk
+FROM ringcentral/jdk:8u202
 ARG app
 ADD $app app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
